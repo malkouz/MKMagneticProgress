@@ -84,9 +84,10 @@ Take a look at the example project over [here](Example/)
 ## Author
 
 Moayad Al kouz, moayad_kouz9@hotmail.com
+</p>
 Twitter : @malkouz
 
 ## License
 
-MKColorPicker is available under the MIT license. See the LICENSE file for more info.
+MKMagneticProgress is available under the MIT license. See the LICENSE file for more info.
 
