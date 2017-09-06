@@ -13,15 +13,15 @@ import UIKit
 // MARK: - Line Cap Enum
 
 public enum LineCap : Int{
-    case Round, Butt, Square
+    case round, butt, square
     
     public func style() -> String {
         switch self {
-        case .Round:
+        case .round:
             return kCALineCapRound
-        case .Butt:
+        case .butt:
             return kCALineCapButt
-        case .Square:
+        case .square:
             return kCALineCapSquare
         }
     }
@@ -118,7 +118,7 @@ open class MKMagneticProgress: UIView {
     }
 
     /// Progress shapes line cap.
-    open var lineCap: LineCap = .Round {
+    open var lineCap: LineCap = .round {
         didSet {
             updateShapes()
         }
