@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKMagneticProgress'
-  s.version          = '1.0.0'
-  s.summary          = 'A short description of MKMagneticProgress.'
+  s.version          = '1.0'
+  s.summary          = 'A circular progress bar for iOS written in Swift.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+MKMagneticProgress is a circular progress bar for iOS written in Swift, easy to customizd via Interface builder or by code .
                        DESC
 
-  s.homepage         = 'https://github.com/moayad_kouz9@hotmail.com/MKMagneticProgress'
+  s.homepage         = 'https://github.com/malkouz/MKMagneticProgress'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'moayad_kouz9@hotmail.com' => 'malkouz@dopravo.com' }
-  s.source           = { :git => 'https://github.com/moayad_kouz9@hotmail.com/MKMagneticProgress.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Moayad Al kouz' => 'moayad_kouz9@hotmail.com' }
+  s.source           = { :git => 'https://github.com/malkouz/MKMagneticProgress.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/malkouz>'
 
   s.ios.deployment_target = '8.0'
 
