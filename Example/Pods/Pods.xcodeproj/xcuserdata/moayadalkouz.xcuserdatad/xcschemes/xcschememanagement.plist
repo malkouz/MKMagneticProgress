@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>MKColorPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MKMagneticProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Example_Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1756F216E4712D8E854FA252C09C09F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>555FA40AD2A1B679F1F76A07474AE726</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D826350F84D5EAC18608FB24B45096D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5A4B19FF2E654C0F839E2212A270058</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

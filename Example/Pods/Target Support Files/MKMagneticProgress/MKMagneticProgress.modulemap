@@ -1,0 +1,6 @@
+framework module MKMagneticProgress {
+  umbrella header "MKMagneticProgress-umbrella.h"
+
+  export *
+  module * { export * }
+}
