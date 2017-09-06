@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKMagneticProgress'
-  s.version          = '1.0'
+  s.version          = '1.2'
   s.summary          = 'A circular progress bar for iOS written in Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -26,17 +26,11 @@ MKMagneticProgress is a circular progress bar for iOS written in Swift, easy to 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Moayad Al kouz' => 'moayad_kouz9@hotmail.com' }
   s.source           = { :git => 'https://github.com/malkouz/MKMagneticProgress.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/malkouz>'
+  s.social_media_url = 'https://twitter.com/malkouz'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MKMagneticProgress/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'MKMagneticProgress' => ['MKMagneticProgress/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
