@@ -34,7 +34,7 @@ end
 
 ### Manually
 
-1. Simply download the `MKMagneticProgress.swift` file from [here](https://github.com/malkouz/MKMagneticProgress/blob/master/MKMagneticProgress/Classes/MKMagneticProgress.swift) into your project, make sure you point to your projects target
+Simply download the `MKMagneticProgress.swift` file from [here](https://github.com/malkouz/MKMagneticProgress/blob/master/MKMagneticProgress/Classes/MKMagneticProgress.swift) into your project, make sure you point to your projects target
 
 ## Usage
 
@@ -77,4 +77,16 @@ Take a look at the example project over [here](Example/)
 
 1. Download it
 2. Open the `Example.xcworkspace` in Xcode
-3. Mess around and experiment!
+3. Enjoy!
+
+
+
+## Author
+
+Moayad Al kouz, moayad_kouz9@hotmail.com
+Twitter : @malkouz
+
+## License
+
+MKColorPicker is available under the MIT license. See the LICENSE file for more info.
+
