@@ -1,3 +1,10 @@
+# MKMagneticProgress
+
+[![CI Status](http://img.shields.io/travis/malkouz/MKMagneticProgress.svg?style=flat)](https://travis-ci.org/malkouz/MKMagneticProgress)
+[![Version](https://img.shields.io/cocoapods/v/MKMagneticProgress.svg?style=flat)](http://cocoapods.org/pods/MKMagneticProgress)
+[![License](https://img.shields.io/cocoapods/l/MKMagneticProgress.svg?style=flat)](http://cocoapods.org/pods/MKMagneticProgress)
+[![Platform](https://img.shields.io/cocoapods/p/MKMagneticProgress.svg?style=flat)](http://cocoapods.org/pods/MKMagneticProgress)
+
 
 <h1 align="center">MKMagneticProgress</h1>
 <h3 align="center">A circular progress bar for iOS written in Swift</h3>
