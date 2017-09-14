@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,28 +30,29 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.5"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundShapeColor">
-                                        <color key="value" red="0.37064057589999999" green="0.93365043400000003" blue="0.99812215569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.99889820809999996" green="0.27086907630000001" blue="0.2115529776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressShapeColor">
-                                        <color key="value" red="0.99889820809999996" green="0.27086907630000001" blue="0.2115529776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.37064057589999999" green="0.93365043400000003" blue="0.99812215569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="percentLabelFormat" value="%.2f%%"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Title here"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="percentLabelFormat" value="%.1f%%"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Progress"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                        <color key="value" red="0.99889820809999996" green="0.27086907630000001" blue="0.2115529776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="percentColor">
-                                        <color key="value" red="0.4941176471" green="0.1019607843" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spaceDegree">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qSM-DU-VDL">
@@ -233,6 +234,41 @@
                                     <action selector="colorPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vKi-LM-dbS"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="45" minValue="45" maxValue="135" translatesAutoresizingMaskIntoConstraints="NO" id="W8A-pe-thZ">
+                                <rect key="frame" x="120" y="566" width="241" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8VT-mT-n9o"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="SpaceChangedValueWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dwb-oG-cdv"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hg-YV-oYX">
+                                <rect key="frame" x="16" y="565" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="7RK-Mc-eFe"/>
+                                    <constraint firstAttribute="height" constant="30" id="xFl-Kf-AhX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clockwise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgk-k3-E8y">
+                                <rect key="frame" x="16" y="605" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="O1Y-yR-fwP"/>
+                                    <constraint firstAttribute="height" constant="30" id="qjC-4m-698"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SrR-b6-clv">
+                                <rect key="frame" x="122" y="606" width="51" height="31"/>
+                                <connections>
+                                    <action selector="clockwiseChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pm8-23-QB8"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -241,26 +277,35 @@
                             <constraint firstItem="D1X-wG-Quh" firstAttribute="top" secondItem="qtf-kk-5Af" secondAttribute="bottom" constant="15" id="5bS-Rp-Ojm"/>
                             <constraint firstItem="xbm-7z-epp" firstAttribute="top" secondItem="ChD-aT-7Na" secondAttribute="bottom" constant="10" id="5cP-0s-4je"/>
                             <constraint firstItem="YAg-wh-hoO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="5fD-1a-WxO"/>
+                            <constraint firstItem="SrR-b6-clv" firstAttribute="top" secondItem="W8A-pe-thZ" secondAttribute="bottom" constant="10" id="5zU-Fp-ksB"/>
+                            <constraint firstItem="6Hg-YV-oYX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="7uA-LP-1mD"/>
                             <constraint firstAttribute="trailing" secondItem="bLX-HB-3Fa" secondAttribute="trailing" constant="16" id="956-KC-G1b"/>
                             <constraint firstItem="J4U-Yl-Uvg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="9Cr-C9-yTm"/>
                             <constraint firstItem="IQQ-hQ-kbc" firstAttribute="top" secondItem="yhS-qB-Q0Z" secondAttribute="bottom" constant="10" id="9rS-19-egh"/>
+                            <constraint firstItem="Zgk-k3-E8y" firstAttribute="top" secondItem="6Hg-YV-oYX" secondAttribute="bottom" constant="10" id="Ecn-T1-CVT"/>
                             <constraint firstItem="04a-9U-uw2" firstAttribute="leading" secondItem="J4U-Yl-Uvg" secondAttribute="trailing" constant="16" id="FNT-ND-DZE"/>
                             <constraint firstItem="qSM-DU-VDL" firstAttribute="leading" secondItem="hn9-PW-lnJ" secondAttribute="trailing" constant="16" id="GVU-me-Irk"/>
                             <constraint firstItem="IQQ-hQ-kbc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="IBU-ls-L1V"/>
                             <constraint firstItem="ChD-aT-7Na" firstAttribute="top" secondItem="qSM-DU-VDL" secondAttribute="bottom" constant="10" id="KfK-9Z-EKd"/>
                             <constraint firstItem="4HY-bO-O8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Kys-Yf-mdA"/>
                             <constraint firstItem="qSM-DU-VDL" firstAttribute="top" secondItem="bLX-HB-3Fa" secondAttribute="bottom" constant="10" id="LUm-fl-2Je"/>
+                            <constraint firstItem="6Hg-YV-oYX" firstAttribute="top" secondItem="4HY-bO-O8b" secondAttribute="bottom" constant="5" id="LXF-Hf-HyO"/>
+                            <constraint firstItem="Zgk-k3-E8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Lga-bb-GMo"/>
                             <constraint firstItem="ChD-aT-7Na" firstAttribute="leading" secondItem="yhS-qB-Q0Z" secondAttribute="trailing" constant="16" id="Oi5-OR-mQs"/>
                             <constraint firstItem="bLX-HB-3Fa" firstAttribute="top" secondItem="S64-Ut-MbZ" secondAttribute="bottom" constant="10" id="Pgy-BW-ey5"/>
+                            <constraint firstItem="W8A-pe-thZ" firstAttribute="top" secondItem="xyy-dY-mgE" secondAttribute="bottom" constant="10" id="QfZ-NL-FCX"/>
                             <constraint firstItem="hn9-PW-lnJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Vwe-7B-ZGu"/>
                             <constraint firstItem="J4U-Yl-Uvg" firstAttribute="top" secondItem="IQQ-hQ-kbc" secondAttribute="bottom" constant="10" id="WPQ-ss-zXg"/>
                             <constraint firstAttribute="trailing" secondItem="D1X-wG-Quh" secondAttribute="trailing" constant="16" id="XiG-dw-upM"/>
+                            <constraint firstItem="W8A-pe-thZ" firstAttribute="leading" secondItem="6Hg-YV-oYX" secondAttribute="trailing" constant="16" id="Xop-QD-Nq3"/>
                             <constraint firstItem="YAg-wh-hoO" firstAttribute="top" secondItem="qtf-kk-5Af" secondAttribute="bottom" constant="15" id="ady-ts-akG"/>
                             <constraint firstAttribute="trailing" secondItem="ChD-aT-7Na" secondAttribute="trailing" constant="16" id="bBC-fY-z95"/>
                             <constraint firstItem="xbm-7z-epp" firstAttribute="leading" secondItem="IQQ-hQ-kbc" secondAttribute="trailing" constant="16" id="cak-0c-5Oj"/>
+                            <constraint firstItem="SrR-b6-clv" firstAttribute="leading" secondItem="Zgk-k3-E8y" secondAttribute="trailing" constant="16" id="cw1-JG-4dG"/>
                             <constraint firstItem="pLV-Og-kgx" firstAttribute="top" secondItem="D1X-wG-Quh" secondAttribute="bottom" constant="10" id="dVa-le-W2N"/>
                             <constraint firstItem="xyy-dY-mgE" firstAttribute="top" secondItem="04a-9U-uw2" secondAttribute="bottom" constant="10" id="eXN-iM-iyv"/>
                             <constraint firstAttribute="trailing" secondItem="qSM-DU-VDL" secondAttribute="trailing" constant="16" id="hBR-Np-YN4"/>
+                            <constraint firstAttribute="trailing" secondItem="W8A-pe-thZ" secondAttribute="trailing" constant="16" id="hrg-83-L9q"/>
                             <constraint firstItem="S64-Ut-MbZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="iAT-cw-9o0"/>
                             <constraint firstItem="hn9-PW-lnJ" firstAttribute="top" secondItem="bLX-HB-3Fa" secondAttribute="bottom" constant="10" id="met-1c-axm"/>
                             <constraint firstAttribute="trailing" secondItem="pLV-Og-kgx" secondAttribute="trailing" constant="16" id="mfk-0o-YQd"/>

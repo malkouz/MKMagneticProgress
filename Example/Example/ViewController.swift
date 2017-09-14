@@ -97,11 +97,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func lineCapChanged(sender: UISegmentedControl){
-        
         if let lineCap = LineCap(rawValue: sender.selectedSegmentIndex){
             magProgress.lineCap = lineCap
         }
-        
+    }
+    
+    @IBAction func SpaceChangedValue(sender: UISlider){
+        magProgress.spaceDegree = CGFloat(sender.value)
     }
     
     
@@ -109,6 +111,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         magProgress.title = sender.text!
     }
     
+    @IBAction func clockwiseChanged(sender: UISwitch){
+        magProgress.clockwise = sender.isOn
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         titleTextField.resignFirstResponder()

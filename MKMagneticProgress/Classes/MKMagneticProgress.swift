@@ -42,10 +42,15 @@ open class MKMagneticProgress: UIView {
     
     private let percentLabel = UILabel(frame: .zero)
     @IBInspectable open var titleLabel = UILabel(frame: .zero)
+    
     /// Stroke background color
+    @IBInspectable open var clockwise: Bool = true {
+        didSet {
+            layoutSubviews()
+        }
+    }
     
-    
-    
+    /// Stroke background color
     @IBInspectable open var backgroundShapeColor: UIColor = UIColor(white: 0.9, alpha: 0.5) {
         didSet {
             updateShapes()
@@ -62,6 +67,23 @@ open class MKMagneticProgress: UIView {
     /// Line width
     @IBInspectable open var lineWidth: CGFloat = 8.0 {
         didSet {
+            updateShapes()
+        }
+    }
+    
+    /// Space value
+    @IBInspectable open var spaceDegree: CGFloat = 45.0 {
+        didSet {
+            if spaceDegree < 45.0{
+                spaceDegree = 45.0
+            }
+            
+            if spaceDegree > 135.0{
+                spaceDegree = 135.0
+            }
+            
+            layoutSubviews()
+
             updateShapes()
         }
     }
@@ -284,8 +306,18 @@ open class MKMagneticProgress: UIView {
         return bounds.insetBy(dx: lineWidth / 2.0, dy: lineWidth / 2.0)
     }
     private func pathForShape(rect: CGRect) -> UIBezierPath {
+        let startAngle:CGFloat!
+        let endAngle:CGFloat!
         
-        let path = UIBezierPath(arcCenter: CGPoint(x: rect.midX, y: rect.midY), radius: rect.size.width / 2.0, startAngle: CGFloat(3.00 * (.pi / 4)), endAngle: CGFloat(2.255 * .pi), clockwise: true)
+        if clockwise{
+            startAngle = CGFloat(spaceDegree * .pi / 180.0) + (0.5 * .pi)
+            endAngle = CGFloat((360.0 - spaceDegree) * (.pi / 180.0)) + (0.5 * .pi)
+        }else{
+            startAngle = CGFloat((360.0 - spaceDegree) * (.pi / 180.0)) + (0.5 * .pi)
+            endAngle = CGFloat(spaceDegree * .pi / 180.0) + (0.5 * .pi)
+        }
+        let path = UIBezierPath(arcCenter: CGPoint(x: rect.midX, y: rect.midY), radius: rect.size.width / 2.0, startAngle: startAngle, endAngle: endAngle
+            , clockwise: clockwise)
     
         return path
     }
