@@ -48,7 +48,7 @@ open class ColorPickerViewController: UIViewController, UIPopoverPresentationCon
         }
     }
     
-    open var scrollDirection: UICollectionViewScrollDirection = .horizontal{
+    open var scrollDirection: UICollectionView.ScrollDirection = .horizontal{
         didSet{
             colorPickerView.scrollDirection = scrollDirection
         }

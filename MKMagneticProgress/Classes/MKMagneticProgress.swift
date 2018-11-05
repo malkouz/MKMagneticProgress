@@ -74,13 +74,13 @@ open class MKMagneticProgress: UIView {
     /// Space value
     @IBInspectable open var spaceDegree: CGFloat = 45.0 {
         didSet {
-            if spaceDegree < 45.0{
-                spaceDegree = 45.0
-            }
-            
-            if spaceDegree > 135.0{
-                spaceDegree = 135.0
-            }
+//            if spaceDegree < 45.0{
+//                spaceDegree = 45.0
+//            }
+//            
+//            if spaceDegree > 135.0{
+//                spaceDegree = 135.0
+//            }
             
             layoutSubviews()
 

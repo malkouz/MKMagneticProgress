@@ -67,7 +67,7 @@ open class ColorPickerView: UIView, UICollectionViewDelegate, UICollectionViewDa
     /// Style applied when a color is selected
     open var selectionStyle: ColorPickerViewSelectStyle = .check
     
-    open var scrollDirection: UICollectionViewScrollDirection = .horizontal{
+    open var scrollDirection: UICollectionView.ScrollDirection = .horizontal{
         didSet{
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = scrollDirection
