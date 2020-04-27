@@ -15,14 +15,14 @@ import UIKit
 public enum LineCap : Int{
     case round, butt, square
     
-    public func style() -> String {
+    public func style() -> CAShapeLayerLineCap {
         switch self {
         case .round:
-            return kCALineCapRound
+            return CAShapeLayerLineCap.round
         case .butt:
-            return kCALineCapButt
+            return CAShapeLayerLineCap.butt
         case .square:
-            return kCALineCapSquare
+            return CAShapeLayerLineCap.square
         }
     }
 }
