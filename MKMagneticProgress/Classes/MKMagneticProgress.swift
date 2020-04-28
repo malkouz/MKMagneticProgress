@@ -15,14 +15,14 @@ import UIKit
 public enum LineCap : Int{
     case round, butt, square
     
-    public func style() -> CAShapeLayerLineCap {
+    public func style() -> String {
         switch self {
         case .round:
-            return CAShapeLayerLineCap.round
+            return CAShapeLayerLineCap.round.rawValue
         case .butt:
-            return CAShapeLayerLineCap.butt
+            return CAShapeLayerLineCap.butt.rawValue
         case .square:
-            return CAShapeLayerLineCap.square
+            return CAShapeLayerLineCap.square.rawValue
         }
     }
 }
@@ -262,11 +262,11 @@ open class MKMagneticProgress: UIView {
     private func updateShapes() {
         backgroundShape?.lineWidth  = lineWidth
         backgroundShape?.strokeColor = backgroundShapeColor.cgColor
-        backgroundShape?.lineCap     = lineCap.style()
+        backgroundShape?.lineCap     = CAShapeLayerLineCap(rawValue: lineCap.style())
         
         progressShape?.strokeColor = progressShapeColor.cgColor
         progressShape?.lineWidth   = lineWidth - inset
-        progressShape?.lineCap     = lineCap.style()
+        progressShape?.lineCap     = CAShapeLayerLineCap(rawValue: lineCap.style())
         
         switch orientation {
         case .left:
